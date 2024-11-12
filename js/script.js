@@ -22,16 +22,43 @@ form.addEventListener('submit', (e) => {
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
 
-    let tr = table.insertRow('tr')
-    let row = document.createTextNode('row')
-    tr1.appendChild(row)
+    let tr = document.createElement('tr')
+    table.appendChild(tr)
 
-    let list = document.getElementById('employees')
-    list.appendChild(tr)
+    //TESTING
+    // console.log(tr)
+    // console.log(table)
+
 
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+    
+    let td = document.createElement('td')
+    // let contentId = document.createTextNode(id, name)
+    // td.appendChild(contentId)
+
+    tr.innerHTML = `<td>${id}</td><td>${name}</td>`
+
+    console.log(td)
+    console.log(tr)
+    
+
+
+      
+    
+    // let thId = tr.insertCell()
+    // let thName = tr.insertCell()
+    // let thExt = tr.insertCell()
+    // let thEmail = tr.insertCell()
+    // let thDepartment = tr.insertCell()
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
+
+    // let contentID = document.createTextNode(id)
+    // thId.appendChild(contentID)
+
+    // let th = document.createElement('tr')
+    // let content = document.createTextNode('List Items')
+    // tr.appendChild(content)
 
     // CREATE THE DELETE BUTTON
 
