@@ -19,48 +19,79 @@ form.addEventListener('submit', (e) => {
     let extension = document.getElementById('extension').value
     let email = document.getElementById('email').value
     let department = document.getElementById('department').value
+    
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
 
-    let tr = document.createElement('tr')
-    table.appendChild(tr)
+    let tr = table.insertRow()
+    let cellId = tr.insertCell()
+    let textId = createTextNode(id)
+    cellId.appendChild(textId)
 
-    //TESTING
-    // console.log(tr)
-    // console.log(table)
+    
+ 
+
+//    tr1.appendChild(row)
+
+//    let list = document.getElementById('employees')
+//    list.appendChild(tr)
+
+
 
 
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+
+     
+
+    // let tdId = document.createElement('td')
+    // let contentID = document.createTextNode(id)
+  
+    // let tdName = document.createElement('td')
+    // let contentName = document.createTextNode(name)
     
-    let td = document.createElement('td')
-    // let contentId = document.createTextNode(id, name)
-    // td.appendChild(contentId)
 
-    tr.innerHTML = `<td>${id}</td><td>${name}</td>`
-
-    console.log(td)
-    console.log(tr)
+    // let tdExt = document.createElement('td')
+    // let contentExt = document.createTextNode(extension)
     
 
-
-      
+    // let tdEmail = document.createElement('td')
+    // let contentEmail= document.createTextNode(email)
     
-    // let thId = tr.insertCell()
-    // let thName = tr.insertCell()
-    // let thExt = tr.insertCell()
-    // let thEmail = tr.insertCell()
-    // let thDepartment = tr.insertCell()
+
+    // let tdDept = document.createElement('td')
+    // let contentDept= document.createTextNode(department)
+    
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
+    // tr.append(tdId)
+    // tdId.appendChild(contentID)
 
-    // let contentID = document.createTextNode(id)
-    // thId.appendChild(contentID)
+    // tr.append(tdName)
+    // tdName.appendChild(contentName)
 
-    // let th = document.createElement('tr')
-    // let content = document.createTextNode('List Items')
-    // tr.appendChild(content)
+    // tr.append(tdExt)
+    // tdExt.appendChild(contentExt)
 
-    // CREATE THE DELETE BUTTON
+    // tr.append(tdEmail)
+    // tdEmail.appendChild(contentEmail)
+
+    // tr.append(tdDept)
+    // tdDept.appendChild(contentDept)
+
+
+    // // tr.innerHTML = `<td>${id}</td><td>${name}</td><td>${extension}</td>
+    // //                 <td>${email}</td><td>${department}</td><td>${&nbsp;}</td>`
+
+    // // CREATE THE DELETE BUTTON
+
+    // let btn = document.createElement('td')
+    // let deleteBtn = document.createElement('button')
+    // btn.append(deleteBtn)
+    // deleteBtn.className = 'btn btn-danger btn-sm float-end delete'
+
+    // let textDelete = document.createTextNode('X')
+    // deleteBtn.appendChild(textDelete)
+    // tr.appendChild(btn)
 
     // RESET THE FORM
 
@@ -72,4 +103,8 @@ form.addEventListener('submit', (e) => {
 
 // DELETE EMPLOYEE
 
-form.reset()
+// tr.addEventListener('click', (e) => {
+//     if(e.target.classList.contains('delete')) {
+//         console.log('delete')
+//     }
+// })
